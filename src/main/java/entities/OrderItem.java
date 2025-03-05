@@ -47,10 +47,10 @@ public class OrderItem {
     public String toString() {
         return getProduct().getName()
                 + ", $"
-                + getProduct().getPrice()
+                + String.format("%.2f",getProduct().getPrice())
                 + ", Quantity: "
                 + quantity
                 + ", Subtotal: "
-                +subTotal();
+                +String.format("%.2f", subTotal());
     }
 }
