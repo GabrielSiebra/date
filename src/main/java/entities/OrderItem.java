@@ -42,4 +42,15 @@ public class OrderItem {
     public double subTotal(){
         return price * quantity;
     }
+
+    @Override
+    public String toString() {
+        return getProduct().getName()
+                + ", $"
+                + getProduct().getPrice()
+                + ", Quantity: "
+                + quantity
+                + ", Subtotal: "
+                +subTotal();
+    }
 }
